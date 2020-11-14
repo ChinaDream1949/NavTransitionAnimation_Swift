@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hfl-Cx-QvY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nav 转场动画-->
+        <scene sceneID="BDR-T3-yHK">
+            <objects>
+                <viewController id="NXx-Mh-vEb" customClass="MainViewController" customModule="NavTransitionAnimation_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u33-rG-r8j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gei-Ht-9OY">
+                                <rect key="frame" x="75" y="425.5" width="264" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="G2j-hj-5Yq"/>
+                                    <constraint firstAttribute="width" constant="264" id="Vd4-4M-t8F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="IPhone 11">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="S0w-jM-kyz" kind="show" id="VXe-c7-cUF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yVz-aJ-yhI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gei-Ht-9OY" firstAttribute="centerY" secondItem="yVz-aJ-yhI" secondAttribute="centerY" id="98A-uP-4tW"/>
+                            <constraint firstItem="gei-Ht-9OY" firstAttribute="centerX" secondItem="yVz-aJ-yhI" secondAttribute="centerX" id="wpv-YY-hJB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nav 转场动画" id="jh6-nh-BnZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfT-cI-7Ef" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.71014492753625" y="86.383928571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="bmu-Bq-be8">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="S0w-jM-kyz" customClass="DetailViewController" customModule="NavTransitionAnimation_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEj-he-NaM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eevee" translatesAutoresizingMaskIntoConstraints="NO" id="UdC-0C-ooC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JUz-jj-1g2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UdC-0C-ooC" firstAttribute="trailing" secondItem="JUz-jj-1g2" secondAttribute="trailing" id="6T6-bx-CdM"/>
+                            <constraint firstItem="UdC-0C-ooC" firstAttribute="bottom" secondItem="JUz-jj-1g2" secondAttribute="bottom" id="D08-0A-Q9j"/>
+                            <constraint firstItem="UdC-0C-ooC" firstAttribute="top" secondItem="JUz-jj-1g2" secondAttribute="top" id="csc-iA-Hbl"/>
+                            <constraint firstItem="UdC-0C-ooC" firstAttribute="leading" secondItem="JUz-jj-1g2" secondAttribute="leading" id="uTp-Jg-umn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9yH-T9-Qn8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-SH-Zoa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263.768115942029" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cWF-4f-ikY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hfl-Cx-QvY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aPD-Rt-wWi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NXx-Mh-vEb" kind="relationship" relationship="rootViewController" id="UoD-8p-Pbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSU-TP-0Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430.43478260869568" y="86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eevee" width="719" height="1004"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
